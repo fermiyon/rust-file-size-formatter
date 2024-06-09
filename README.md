@@ -18,7 +18,7 @@ This Rust program provides a simple way to convert file sizes between different 
 To use this program, you need to pass the file size with its unit as an argument when running the program. The format should be `<size> <unit>`, where `<unit>` can be `bytes`, `kb`, `mb`, or `gb`.
 
 ```bash
-cargo run -- 300 kb
+cargo run -- "300 kb"
 ```
 
 Running the command above will produce the following output:
