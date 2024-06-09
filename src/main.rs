@@ -1,9 +1,38 @@
-/// This module provides utilities for handling file sizes, allowing users to input a string
-/// representing the size and unit (e.g., "300 kb" or "12 mb"). It defines a `Sizes` struct
-/// that holds the file size in various units (bytes, kilobytes, megabytes, gigabytes) and
-/// returns a debug representation of this struct. The module includes an enum `FileSize`
-/// with variants for different size units and functions to parse the input string and
-/// format the file sizes accordingly.
+//! # File Size Converter
+//!
+//! This Rust program converts file sizes between different units: bytes, kilobytes, megabytes, and gigabytes.
+//!
+//! ## Usage
+//!
+//! Run the program with the desired file size as a command-line argument. For example:
+//!
+//! ```sh
+//! cargo run -- 300 kb
+//! ```
+//!
+//! The program will display the converted sizes in bytes, kilobytes, megabytes, and gigabytes.
+//!
+//! ## Example Input
+//!
+//! - `300 kb`
+//!
+//! ## Example Output
+//!
+//! ```
+//! Bytes: 300000 bytes
+//! Kilobytes: 300.00 KB
+//! Megabytes: 0.30 MB
+//! Gigabytes: 0.00 GB
+//! Sizes: Sizes { bytes: "300000 bytes", kilobytes: "300.00 KB", megabytes: "0.30 MB", gigabytes: "0.00 GB" }
+//! ```
+//!
+//! ## Notes
+//!
+//! - Ensure that the input format includes a valid size value followed by the unit (e.g., "300 kb" or "12 mb").
+//! - Negative sizes are not allowed.
+//! - Unknown units will result in an error.
+//!
+//! Author - Selman Karaosmanoglu, 2024
 
 #[derive(Debug)]
 enum FileSize {
