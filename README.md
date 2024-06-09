@@ -33,7 +33,6 @@ Sizes: Sizes { bytes: "300000 bytes", kilobytes: "300.00 KB", megabytes: "0.30 M
 
 ## Implementation Details
 
-Implementation Details
 The program defines an enum called FileSize that represents the file size in different units. It also includes a struct called Sizes that formats the file size into strings for each unit.
 
 The FileSize::from_input function parses the input string and returns the corresponding FileSize. The Sizes::from_file_size function takes a FileSize and returns a Sizes instance with formatted strings for each unit.
